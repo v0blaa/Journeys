@@ -26,14 +26,12 @@ extension FirebaseService: FirebaseServiceObtainProtocol {
     
     func obtainTrips(completion: @escaping (Result<[Trip], Error>) -> Void){
         guard let userId = FBManager.auth.currentUser?.uid else {
-            //            assertionFailure("Login first")
             return
         }
         FBManager.firestore.collection("trips")
             .document(userId).collection("user_trips").getDocuments { (snapshot, error) in
                 if let error = error {
                     completion(.failure(error))
-                    assertionFailure("Error while obtaining trips data")
                     return
                 }
                 guard let documents = snapshot?.documents else {
@@ -49,14 +47,12 @@ extension FirebaseService: FirebaseServiceObtainProtocol {
     
     func obtainSavedTrips(completion: @escaping (Result<[Trip], Error>) -> Void){
         guard let userId = FBManager.auth.currentUser?.uid else {
-            //            assertionFailure("Login first")
             return
         }
         FBManager.firestore.collection("trips")
             .document(userId).collection("user_trips").whereField("is_saved", isEqualTo: true).getDocuments { (snapshot, error) in
                 if let error = error {
                     completion(.failure(error))
-                    assertionFailure("Error while obtaining trips data")
                     return
                 }
                 guard let documents = snapshot?.documents else {
@@ -72,18 +68,15 @@ extension FirebaseService: FirebaseServiceObtainProtocol {
     
     func obtainTrip(with identifier: String, completion: @escaping (Result<Trip, Error>) -> Void) {
         guard let userId = FBManager.auth.currentUser?.uid else {
-            //            assertionFailure("Login first")
             return
         }
         FBManager.firestore.collection("trips").document(userId).collection("user_trips").document(identifier)
             .getDocument() { (document, error) in
                 if let error = error {
                     completion(.failure(error))
-                    assertionFailure("Error while obtaining trips data")
                     return
                 }
                 guard let data = document?.data() else {
-                    assertionFailure("No data found")
                     return
                 }
                 guard let trip = Trip(from: data, id: document!.documentID) else { return }
@@ -95,11 +88,9 @@ extension FirebaseService: FirebaseServiceObtainProtocol {
         Firestore.firestore().collection("routes").document(identifier).getDocument { (document, error) in
             if let error = error {
                 completion(.failure(error))
-                assertionFailure("Error while obtaining trips data")
                 return
             }
             guard let data = document?.data() else {
-                assertionFailure("No data found")
                 return
             }
             guard let route = Route(from: data, id: document!.documentID) else {
@@ -116,7 +107,6 @@ extension FirebaseService: FirebaseServiceObtainProtocol {
         ref.getData(maxSize: maxSize) { (data, error) in
             if let error = error {
                 completion(.failure(error))
-                assertionFailure("Error while obtaining image")
                 return
             }
             if let imageData = data {
@@ -130,11 +120,9 @@ extension FirebaseService: FirebaseServiceObtainProtocol {
         FBManager.firestore.collection("base_stuff").getDocuments { (snapshot, error) in
             if let error = error {
                 completion(.failure(error))
-                assertionFailure("Error while obtaining trips data")
                 return
             }
             guard let snapshot = snapshot else {
-                assertionFailure("No data found")
                 return
             }
             
@@ -153,7 +141,6 @@ extension FirebaseService: FirebaseServiceObtainProtocol {
             .getDocuments { (snapshot, error) in
                 if let error = error {
                     completion(.failure(error))
-                    assertionFailure("Error while obtaining trips data")
                     return
                 }
                 guard let documents = snapshot?.documents else {
@@ -170,11 +157,9 @@ extension FirebaseService: FirebaseServiceObtainProtocol {
         FBManager.firestore.collection("baggage").document(baggageId).getDocument { (document, error) in
             if let error = error {
                 completion(.failure(error))
-                assertionFailure("Error while obtaining trips data")
                 return
             }
             guard let data = document?.data() else {
-                assertionFailure("No data found")
                 return
             }
             guard let baggage = Baggage(from: data, id: document!.documentID) else {

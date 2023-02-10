@@ -82,14 +82,6 @@ final class LocationCell: UITableViewCell, UITextFieldDelegate {
                 .inset(Constants.LocationTextField.minTraillingIndent)
             make.centerY.equalTo(icon.snp.centerY)
         }
-
-//        chevronButton.snp.makeConstraints { make in
-//            make.trailing.equalToSuperview()
-//                .inset(Constants.Chevron.trailingIndent)
-//            make.centerY.equalTo(icon.snp.centerY)
-//            make.height.equalTo(Constants.Chevron.height)
-//            make.width.equalTo(Constants.Chevron.width)
-//        }
     }
     
     @objc

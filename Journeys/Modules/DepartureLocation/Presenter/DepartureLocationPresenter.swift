@@ -71,7 +71,6 @@ extension DepartureLocationPresenter: DepartureLocationViewOutput {
         
         departureLocation = Location(country: country,
                                      city: city)
-        // TODO: finish save
         guard let departureLocation = departureLocation else {
             view.showAlert(title: "Ошибка", message: "Ошибка при сохранении данных")
             return

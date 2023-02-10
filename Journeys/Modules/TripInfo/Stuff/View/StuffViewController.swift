@@ -43,7 +43,6 @@ final class StuffViewController: UIViewController {
     private func setupView() {
         view.backgroundColor = UIColor(asset: Asset.Colors.Background.brightColor)
         setupTableView()
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapScreen))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
