@@ -110,6 +110,9 @@ extension StuffPresenter: StuffModelOutput {
     }
     
     func didRecieveData(stuff: [Stuff], baggage: Baggage) {
+        allStuff.removeAll()
+        packedStuff.removeAll()
+        unpackedStuff.removeAll()
         isDataObtained = true
         allStuff = stuff
         self.baggage = baggage
