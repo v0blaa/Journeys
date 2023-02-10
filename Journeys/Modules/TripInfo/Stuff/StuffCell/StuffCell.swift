@@ -83,6 +83,7 @@ final class StuffCell: UITableViewCell {
         nameTextField.placeholder = "Название вещи"
 
         emojiTextField.addTarget(self, action: #selector(emojiTextFieldDidChange), for: .editingDidEnd)
+        emojiTextField.addTarget(self, action: #selector(emojiTextFieldValueChanged(_: )), for: .editingChanged)
         nameTextField.addTarget(self, action: #selector(nameTextFieldDidChange), for: .editingDidEnd)
         packButton.addTarget(self, action: #selector(didTapCellButton), for: .touchUpInside)
         makeConstraints()
@@ -143,6 +144,13 @@ final class StuffCell: UITableViewCell {
     private func emojiTextFieldDidChange() {
         guard let text = emojiTextField.text else { return }
         delegate?.emojiTextFieldDidChange(text, in: self)
+    }
+    
+    @objc
+    private func emojiTextFieldValueChanged(_ textField: UITextField) {
+        if emojiTextField.text?.count == 1 {
+            switchBasedNextTextField(textField)
+        }
     }
                                  
     @objc

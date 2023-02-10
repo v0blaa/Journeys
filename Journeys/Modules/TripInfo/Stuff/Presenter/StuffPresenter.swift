@@ -304,9 +304,7 @@ extension StuffPresenter: StuffViewOutput {
         guard let lastChangedIndexPath = lastChangedIndexPath else { return }
         if let cell = view?.getCell(for: lastChangedIndexPath) as? StuffCell {
             let data = cell.getData()
-            if !data.name.isEmpty {
-                cell.finishEditMode()
-            }
+            cell.finishEditMode()
         }
     }
     
