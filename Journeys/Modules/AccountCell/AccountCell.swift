@@ -64,6 +64,9 @@ final class AccountCell: UICollectionViewCell {
         
         textField.autocorrectionType = .no
         textField.delegate = self
+        
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
 
         setupColors()
         makeConstraints()

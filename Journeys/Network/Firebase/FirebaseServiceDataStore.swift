@@ -23,7 +23,6 @@ extension FirebaseService: FirebaseServiceStoreProtocol {
     
     func storeTripData(trip: Trip, completion: @escaping (Result<Trip, Error>) -> Void) {
         guard let userId = FBManager.auth.currentUser?.uid else {
-//            assertionFailure("Login first")
             return
         }
         var ref: DocumentReference?
@@ -79,7 +78,6 @@ extension FirebaseService: FirebaseServiceStoreProtocol {
                 completion(.success(url.absoluteString))
             }
         }
-        // TODO: add link into trip
     }
     
     func storeBaggageData(baggage: Baggage, completion: @escaping (Result<Baggage, Error>) -> Void) {

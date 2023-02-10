@@ -184,13 +184,6 @@ extension PlacesInfoPresenter: PlacesInfoViewOutput {
 }
 
 extension PlacesInfoPresenter: PlacesInfoModelOutput {
-//    func noCoordunates() {
-//        dataToLoadCount -= 1
-//        if dataToLoadCount == 0 {
-//            isDataLoaded = true
-//            dataLoaded()
-//        }
-//    }
     func noCoordunates() {
         dataToLoadCount -= 1
         if dataToLoadCount == 0 {

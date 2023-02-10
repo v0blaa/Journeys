@@ -16,18 +16,12 @@ class LoadingViewController: UIViewController {
         indicator.style = .large
         indicator.color = .white
             
-        // The indicator should be animating when
-        // the view appears.
+
         indicator.startAnimating()
-            
-        // Setting the autoresizing mask to flexible for all
-        // directions will keep the indicator in the center
-        // of the view and properly handle rotation.
         indicator.autoresizingMask = [
             .flexibleLeftMargin, .flexibleRightMargin,
             .flexibleTopMargin, .flexibleBottomMargin
         ]
-            
         return indicator
     }()
     
@@ -39,15 +33,12 @@ class LoadingViewController: UIViewController {
         blurEffectView.autoresizingMask = [
             .flexibleWidth, .flexibleHeight
         ]
-        
         return blurEffectView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = UIColor.white.withAlphaComponent(0.2)
-        
         blurEffectView.frame = self.view.bounds
         view.insertSubview(blurEffectView, at: 0)
         loadingActivityIndicator.center = CGPoint(

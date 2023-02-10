@@ -69,6 +69,7 @@ final class StuffCell: UITableViewCell {
     }
 
     private func setupSubiews() {
+        backgroundColor = UIColor(asset: Asset.Colors.Background.brightColor)
         contentView.addSubview(nameTextField)
         contentView.addSubview(emojiTextField)
         contentView.addSubview(packButton)

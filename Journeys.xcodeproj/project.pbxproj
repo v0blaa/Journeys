@@ -56,7 +56,6 @@
 		EE00AC18295601CD00FAFDCD /* DepartureLocationViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00AC0F295601CD00FAFDCD /* DepartureLocationViewIO.swift */; };
 		EE00AC1A29561F7C00FAFDCD /* StoreNewTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00AC1929561F7C00FAFDCD /* StoreNewTrip.swift */; };
 		EE00AC1D2956921100FAFDCD /* ImageRouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00AC1C2956921100FAFDCD /* ImageRouteCell.swift */; };
-		EE02E53B294FFA5C002BE87E /* StuffDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE02E53A294FFA5C002BE87E /* StuffDisplayData.swift */; };
 		EE02E53D294FFB10002BE87E /* StuffModelIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE02E53C294FFB10002BE87E /* StuffModelIO.swift */; };
 		EE02E5472950D9EA002BE87E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE02E53F2950D9EA002BE87E /* Location.swift */; };
 		EE02E5492950D9EA002BE87E /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE02E5412950D9EA002BE87E /* Stuff.swift */; };
@@ -201,7 +200,6 @@
 		EE00AC0F295601CD00FAFDCD /* DepartureLocationViewIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartureLocationViewIO.swift; sourceTree = "<group>"; };
 		EE00AC1929561F7C00FAFDCD /* StoreNewTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreNewTrip.swift; sourceTree = "<group>"; };
 		EE00AC1C2956921100FAFDCD /* ImageRouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRouteCell.swift; sourceTree = "<group>"; };
-		EE02E53A294FFA5C002BE87E /* StuffDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffDisplayData.swift; sourceTree = "<group>"; };
 		EE02E53C294FFB10002BE87E /* StuffModelIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffModelIO.swift; sourceTree = "<group>"; };
 		EE02E53F2950D9EA002BE87E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		EE02E5412950D9EA002BE87E /* Stuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
@@ -600,7 +598,6 @@
 		EE02E539294FFA43002BE87E /* StuffDisplayData */ = {
 			isa = PBXGroup;
 			children = (
-				EE02E53A294FFA5C002BE87E /* StuffDisplayData.swift */,
 			);
 			path = StuffDisplayData;
 			sourceTree = "<group>";
@@ -1212,7 +1209,6 @@
 				EE29EBF829191534008ECFF8 /* AppCoordinator.swift in Sources */,
 				EEA76C5F2951325E00250B06 /* PlacesInfoModuleIO.swift in Sources */,
 				91819FAFB33A7ABB47EAB8B0 /* TripsViewIO.swift in Sources */,
-				EE02E53B294FFA5C002BE87E /* StuffDisplayData.swift in Sources */,
 				093861F1C840A5A7EA2ABBB0 /* TripsViewController.swift in Sources */,
 				EED2A75E294FB874003A9A1A /* StuffCell.swift in Sources */,
 				EEA76C692951325E00250B06 /* PlacesInfoViewController.swift in Sources */,
